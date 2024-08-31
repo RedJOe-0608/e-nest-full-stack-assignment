@@ -1,5 +1,5 @@
 // controllers/syllabusController.js
-const Syllabus = require('../models/syllabusModel.js');
+const Syllabus = require('../models/SyllabusModel.js');
 
 const getSyllabus = async (req, res) => {
   try {
