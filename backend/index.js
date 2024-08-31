@@ -5,6 +5,7 @@ const cors = require('cors');
 const coursesRoutes = require('./routes/coursesRoutes.js');
 const syllabusRoutes = require('./routes/syllabusRoutes.js');
 const instructorRoutes = require('./routes/instructionRoutes.js');
+const reviewRoutes = require('./routes/reviewRoutes.js');
 
 const app = express();
 
@@ -18,6 +19,7 @@ connectDB();
 app.use('/api/courses', coursesRoutes);
 app.use('/api/syllabus', syllabusRoutes);
 app.use('/api/instructor', instructorRoutes);
+app.use('/api/reviews', reviewRoutes);
 
 const PORT = process.env.PORT || 5000;
 

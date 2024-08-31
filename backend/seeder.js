@@ -7,6 +7,8 @@ const InstructorModel = require("./models/InstructorModel.js");
 const courses  = require("./data/courses.js");
 const  sections  = require("./data/sections.js");
 const  instructors  = require("./data/instructors.js");
+const ReviewModel = require("./models/ReviewModel.js");
+const reviews = require("./data/reviews.js");
 
 dotenv.config()
 connectDB();
@@ -22,6 +24,8 @@ const importData = async () => {
         await InstructorModel.insertMany(instructors)
 
         await SyllabusModel.insertMany(sections)
+        
+        await ReviewModel.insertMany(reviews)
 
         console.log('Data Imported!');
         process.exit();
@@ -37,6 +41,7 @@ const destroyData = async () => {
         await InstructorModel.deleteMany();
         await CoursesModel.deleteMany();
         await SyllabusModel.deleteMany();
+        await ReviewModel.deleteMany();
 
         console.log('Data Deleted!');
         process.exit();

@@ -1,12 +1,23 @@
+"use client"
+import { useEffect, useState } from "react";
 import ReviewCard from "./ReviewCard";
+import axios from "axios";
+const {timeAgo} = require('../../../utils/timeAgo')
 
 const FeaturedReviews: React.FC = () => {
-    const reviews = [
-      { name: "Raj", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", rating: 5 },
-      { name: "Soham", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", rating: 4 },
-      { name: "Tony", text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.", rating: 4 },
-      // Add more reviews as needed
-    ];
+  
+  const [reviews, setReviews] = useState<any[]>([]);
+
+  useEffect(() => {
+    const loadReviews = async () => {
+      const {data} = await axios.get('http://localhost:5000/api/reviews')
+      console.log(data);
+      
+      setReviews(data);
+    };
+
+    loadReviews();
+  }, []);
   
     return (
       <section className="py-8 flex flex-col justify-center items-center ">
@@ -16,9 +27,9 @@ const FeaturedReviews: React.FC = () => {
             <ReviewCard
             key={index}
             name={review.name}
-            avatarUrl="/images/review-pic.png"  // Replace with actual path
+            avatarUrl={review.imageUrl}  // Replace with actual path
             rating={review.rating}
-            timeAgo="4 Months ago"
+            timeAgo={timeAgo(review.createdAt)}
             reviewText={review.text}
           />
           ))}
