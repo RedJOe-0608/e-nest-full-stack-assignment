@@ -11,7 +11,7 @@ const app = express();
 
 app.use(cors(
   {
-    origin: ["https://e-nest-frontend.vercel.app"],
+    origin: ["https://e-nest-frontend.vercel.app","http://localhost:3000"],
     methods: ["POST","GET"],
     credentials: true
   }

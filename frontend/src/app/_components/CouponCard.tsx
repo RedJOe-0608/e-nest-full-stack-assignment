@@ -1,26 +1,71 @@
-const CouponCard: React.FC = () => {
-    return (
-      <div className="w-full md:w-1/3 bg-white shadow-lg p-4 rounded-lg border">
-        <div className="bg-gray-300 h-32 w-full rounded mb-4"></div>
-        <p className="text-gray-700 mb-4">Use coupon to get extra discounts</p>
-        <div className="flex items-center justify-between bg-purple-100 p-2 rounded mb-4">
-          <span className="text-purple-600 font-bold">ENESTCOUPON28</span>
-          <button className="text-blue-500 hover:underline">Copy</button>
+"use client"
+import React, { useState } from 'react';
+import Image from 'next/image';
+import { ClipboardCopy } from 'lucide-react';
+
+interface CouponCardProps {
+  couponCode: string;
+  imageUrl: string;
+}
+
+const CouponCard: React.FC<CouponCardProps> = ({ couponCode, imageUrl }) => {
+  const [inputCode, setInputCode] = useState('');
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(couponCode);
+  };
+
+  const handleApply = () => {
+    // Implement your apply coupon logic here
+    console.log('Applying coupon:', inputCode);
+  };
+
+  return (
+    <div className="max-w-md mx-auto bg-white text-black rounded-xl overflow-hidden shadow-md">
+      <div className="w-full h-48 relative">
+        <Image
+          src={imageUrl}
+          alt="Coupon image"
+          layout="fill"
+          objectFit="cover"
+        />
+      </div>
+      <div className="p-4">
+        <p className="text-gray-600 text-center text-sm mb-2">Use coupon to get extra discounts</p>
+        <div className="border border-dashed border-purple-300 rounded-lg p-2 mb-4 flex items-center justify-between">
+          <span className="font-bold text-purple-700">{couponCode}</span>
+          <button
+            onClick={handleCopy}
+            className="text-blue-500 hover:text-blue-700 focus:outline-none flex items-center"
+          >
+            <ClipboardCopy size={18} className="mr-1" />
+            Copy
+          </button>
         </div>
-        <button className="bg-purple-600 text-white px-6 py-2 rounded-full w-full hover:bg-purple-700 mb-4">
+        <button
+          onClick={handleApply}
+          className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition-colors duration-300 mb-4"
+        >
           Apply Coupon
         </button>
-        <input
-          type="text"
-          placeholder="Enter coupon code"
-          className="border-2 border-gray-300 w-full p-2 rounded focus:outline-none focus:ring-2 focus:ring-purple-500"
-        />
-        <button className="bg-purple-600 text-white px-4 py-2 rounded-full mt-4 w-full hover:bg-purple-700">
-          Apply
-        </button>
+        <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden">
+          <input
+            type="text"
+            placeholder="Enter coupon code"
+            className="flex-grow p-2 focus:outline-none"
+            value={inputCode}
+            onChange={(e) => setInputCode(e.target.value)}
+          />
+          <button
+            onClick={handleApply}
+            className="bg-purple-700 text-white px-4 py-2 hover:bg-purple-800 transition-colors duration-300"
+          >
+            Apply
+          </button>
+        </div>
       </div>
-    );
-  };
-  
-  export default CouponCard;
-  
+    </div>
+  );
+};
+
+export default CouponCard;

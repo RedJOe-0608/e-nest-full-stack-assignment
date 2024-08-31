@@ -7,7 +7,10 @@ const Hero: React.FC = () => {
 
         <div className="max-w-6xl w-full bg-white p-8 rounded-lg shadow-lg flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8">
         <ProductDetails />
-        <CouponCard />
+        <CouponCard 
+        couponCode="ENESTCOUPON28"
+        imageUrl='/images/home-office.jpg'
+        />
             </div>
         {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl font-bold text-gray-800 leading-tight">
