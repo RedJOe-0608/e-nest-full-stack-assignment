@@ -14,7 +14,6 @@ const Footer: React.FC = () => {
           <p className="my-5 font-bold">Contact Us</p>
           <p>Email</p>
           <p>Talk to a Counsellor</p>
-          <p>Address</p>
         </div>
         
         {/* Quick Links */}
@@ -53,7 +52,7 @@ const Footer: React.FC = () => {
       </div>
       
       {/* Footer Bottom */}
-      <div className="w-full px-10 mt-10 border-t border-gray-600 pt-6 flex flex-col md:flex-row justify-between items-center">
+      <div className="w-full px-10 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
         <div className="flex flex-col items-center space-x-4">
           <h4 className="font-bold mb-4">Address</h4>
             <p className="mb-4">Address Link</p>
