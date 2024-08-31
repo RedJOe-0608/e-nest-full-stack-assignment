@@ -1,11 +1,11 @@
 // app.js
 const express = require('express');
-const connectDB = require('./db/connection.js');
+const connectDB = require('../db/connection.js');
 const cors = require('cors');
-const coursesRoutes = require('./routes/coursesRoutes.js');
-const syllabusRoutes = require('./routes/syllabusRoutes.js');
-const instructorRoutes = require('./routes/instructionRoutes.js');
-const reviewRoutes = require('./routes/reviewRoutes.js');
+const coursesRoutes = require('../routes/coursesRoutes.js');
+const syllabusRoutes = require('../routes/syllabusRoutes.js');
+const instructorRoutes = require('../routes/instructionRoutes.js');
+const reviewRoutes = require('../routes/reviewRoutes.js');
 
 const app = express();
 
