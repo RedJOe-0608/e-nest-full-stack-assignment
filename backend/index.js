@@ -9,11 +9,21 @@ const reviewRoutes = require('./routes/reviewRoutes.js');
 
 const app = express();
 
-app.use(cors());
+app.use(cors(
+  {
+    origin: ["https://e-nest-frontend.vercel.app"],
+    methods: ["POST","GET"],
+    credentials: true
+  }
+));
 app.use(express.json());
 
 // Database connection
 connectDB();
+
+app.get('/',(req,res) => {
+  res.json("hello")
+})
 
 // Routes
 app.use('/api/courses', coursesRoutes);

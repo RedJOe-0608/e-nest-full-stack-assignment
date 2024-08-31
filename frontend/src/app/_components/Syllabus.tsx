@@ -16,7 +16,7 @@ interface Section {
 const CourseContent: React.FC = () => {
   const [sections, setSections] = useState<Section[]>([]);
   const [activeSectionIndex, setActiveSectionIndex] = useState<number>(0);
-
+  axios.defaults.withCredentials = true
   useEffect(() => {
     const fetchSyllabus = async () => {
       try {

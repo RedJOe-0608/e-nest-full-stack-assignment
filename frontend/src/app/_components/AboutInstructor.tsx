@@ -11,6 +11,8 @@ const AboutInstructor: React.FC = () => {
 
   const [instructorDetails, setInstructorDetails] = useState<any>([]);
 
+  axios.defaults.withCredentials = true
+
   useEffect(() => {
     const fetchInstructor = async () => {
       try {

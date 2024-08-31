@@ -7,6 +7,8 @@ const PeopleAlsoBought: React.FC = () => {
 
   const [courses, setCourses] = useState<any[]>([]);
 
+  axios.defaults.withCredentials = true
+  
   useEffect(() => {
     const fetchCourses = async () => {
       try {

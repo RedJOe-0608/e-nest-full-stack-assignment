@@ -8,6 +8,8 @@ const FeaturedReviews: React.FC = () => {
   
   const [reviews, setReviews] = useState<any[]>([]);
 
+  axios.defaults.withCredentials = true
+  
   useEffect(() => {
     const loadReviews = async () => {
       const {data} = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/reviews`)
