@@ -4,7 +4,7 @@ import ProductDetails from "./ProductDetails"
 const Hero: React.FC = () => {
     return (
       <section className=" min-h-screen flex justify-center items-center">
-
+        
         <div className="max-w-6xl w-full bg-white p-8 rounded-lg shadow-lg flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8">
         <ProductDetails />
         <CouponCard 

@@ -1,3 +1,5 @@
+import { CiShare2 } from "react-icons/ci";
+
 const ProductDetails: React.FC = () => {
     return (
       <div className="w-full md:w-2/3 p-4">
@@ -35,10 +37,17 @@ const ProductDetails: React.FC = () => {
           <button className="border-2 border-purple-600 text-purple-600 px-6 py-3 rounded-full hover:bg-purple-600 hover:text-white">
             Add to cart
           </button>
-          <button className="border-2 border-purple-600 text-purple-600 p-3 rounded-full hover:bg-purple-600 hover:text-white">
-            <svg className="w-5 h-5" viewBox="0 0 24 24">
-              <path d="M14 9l-5 5-5-5h10z" />
-            </svg>
+          <button 
+          style={{
+            borderRadius: "50%", 
+            width: "50px", 
+            height: "50px", 
+            display: "inline-flex", 
+            alignItems: "center", 
+            justifyContent: "center"
+          }}  
+          className="border-2 w-50 h-50 border-purple-600 text-purple-600 p-3 hover:bg-purple-600 hover:text-white">
+          <CiShare2 />
           </button>
         </div>
       </div>
