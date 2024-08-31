@@ -11,7 +11,7 @@ import WhatYouWillLearn from "./_components/WhatWillYouLearn"
 
 const Home = () => {
   return (
-    <div className="flex flex-col min-h-screen bg-[#F5F2F8] ">
+    <div className="flex flex-col min-h-screen overflow-x-hidden bg-[#F5F2F8] ">
      <Header />
       <Hero />
       <CourseOfferings />

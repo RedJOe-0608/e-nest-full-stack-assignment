@@ -20,7 +20,7 @@ const CourseContent: React.FC = () => {
   useEffect(() => {
     const fetchSyllabus = async () => {
       try {
-        const { data } = await axios.get("http://localhost:5000/api/syllabus");
+        const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/syllabus`);
         console.log("Syllabus data: " , data);
         
         setSections(data);

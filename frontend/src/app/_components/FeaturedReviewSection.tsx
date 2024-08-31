@@ -10,7 +10,7 @@ const FeaturedReviews: React.FC = () => {
 
   useEffect(() => {
     const loadReviews = async () => {
-      const {data} = await axios.get('http://localhost:5000/api/reviews')
+      const {data} = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/reviews`)
       console.log(data);
       
       setReviews(data);
@@ -21,7 +21,7 @@ const FeaturedReviews: React.FC = () => {
   
     return (
       <section className="py-8 flex flex-col justify-center items-center ">
-        <h2 className="text-center text-purple-600 text-2xl font-bold mb-6">Featured Review</h2>
+        <h2 className="text-center text-purple-600 text-2xl font-bold mb-6">Featured Reviews</h2>
         <div className=" place-items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {reviews.map((review, index) => (
             <ReviewCard

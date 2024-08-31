@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
       <div className="w-full px-10 mt-10 border-t border-gray-600 pt-6 flex flex-col md:flex-row justify-between items-center">
         <div className="flex flex-col items-center space-x-4">
           <h4 className="font-bold mb-4">Address</h4>
-            <p>Address Link</p>
+            <p className="mb-4">Address Link</p>
         </div>
       
           <div className="flex space-x-4">
@@ -75,7 +75,7 @@ const Footer: React.FC = () => {
           </div>
        
           <div className="flex flex-col items-center">
-          <h4 className="font-bold mb-4">Let's Get Social</h4>
+          <h4 className="font-bold my-4">Let's Get Social</h4>
           <div className="flex space-x-3">
           <a href="#" className="text-gray-700 hover:text-blue-500"><IoLogoInstagram style={{width: '1.5rem', height: '1.5rem'}} /></a>
           <a href="#" className="text-gray-700 hover:text-blue-500"><FaLinkedin style={{width: '1.5rem', height: '1.5rem'}} /></a>

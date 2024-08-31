@@ -10,7 +10,7 @@ const PeopleAlsoBought: React.FC = () => {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const { data } = await axios.get("http://localhost:5000/api/courses");
+        const { data } = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/courses`);
         console.log(data);
         
         setCourses(data);
@@ -24,7 +24,7 @@ const PeopleAlsoBought: React.FC = () => {
 
   return (
     <div className="bg-gray-100 py-12">
-      <h2 className="text-center text-purple-700 text-2xl font-bold mb-8">People also bought</h2>
+      <h2 className="text-center text-purple-700 text-2xl font-bold mb-8">People Also Bought</h2>
       
       {/* Responsive Grid Container */}
       <div className="container mx-auto px-4">

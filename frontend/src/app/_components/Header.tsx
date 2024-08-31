@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
   return (
     <div className="bg-white shadow-md">
       {/* Header */}
-      <div className="container mx-auto px-16 py-4 flex justify-between items-center">
+      <div className="container mx-auto px-4 md:px-16 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center space-x-4">
           <div className="w-10 h-10 flex items-center justify-center relative">
@@ -22,65 +22,67 @@ const Navbar: React.FC = () => {
 
         {/* Navigation Links */}
         <div className="hidden md:flex space-x-6">
-          <div className='flex justify-center items-center space-x-2' >
-          <GiGraduateCap style={{color: 'black',width: 20, height: 20}}/> 
-          <a href="#" className="text-gray-700 text-sm hover:text-purple-600">Program</a>
+          <div className="flex items-center space-x-2">
+            <GiGraduateCap style={{ color: 'black', width: 20, height: 20 }} />
+            <a href="#" className="text-gray-700 text-sm hover:text-purple-600">Program</a>
           </div>
-          <div className='flex justify-center items-center space-x-2' >
-          <FaClipboardList style={{color: 'black',width: 15, height: 15}}/> 
-          <a href="#" className="text-gray-700 text-sm hover:text-purple-600">Test Series</a>
+          <div className="flex items-center space-x-2">
+            <FaClipboardList style={{ color: 'black', width: 15, height: 15 }} />
+            <a href="#" className="text-gray-700 text-sm hover:text-purple-600">Test Series</a>
           </div>
-          <div className='flex justify-center items-center space-x-2' >
-          <GiGraduateCap style={{color: 'black',width: 20, height: 20}}/> 
-          <a href="#" className="text-gray-700 text-sm hover:text-purple-600">Skill Connect</a>
+          <div className="flex items-center space-x-2">
+            <GiGraduateCap style={{ color: 'black', width: 20, height: 20 }} />
+            <a href="#" className="text-gray-700 text-sm hover:text-purple-600">Skill Connect</a>
           </div>
-          <div className='flex justify-center items-center space-x-2' >
-          <IoPersonAddSharp style={{color: 'black',width: 15, height: 15}}/> 
-          <a href="#" className="text-gray-700 text-sm hover:text-purple-600">Expert Connect</a>
+          <div className="flex items-center space-x-2">
+            <IoPersonAddSharp style={{ color: 'black', width: 15, height: 15 }} />
+            <a href="#" className="text-gray-700 text-sm hover:text-purple-600">Expert Connect</a>
           </div>
-          <div className='flex justify-center items-center space-x-2' >
-          <a href="#" className="text-gray-700 text-sm hover:text-purple-600">More</a>
-          <IoIosArrowDown style={{color: 'black',width: 10, height: 10}} />
+          <div className="flex items-center space-x-2">
+            <a href="#" className="text-gray-700 text-sm hover:text-purple-600">More</a>
+            <IoIosArrowDown style={{ color: 'black', width: 10, height: 10 }} />
           </div>
         </div>
 
         {/* Profile avatar */}
-        <Image 
-        src='/images/review-pic.png'
-        alt='profile pic'
-        width={50}
-        height={30}
-        className='rounded-full'
-        />
+        <div className="flex items-center">
+          <Image 
+            src='/images/review-pic.png'
+            alt='profile pic'
+            width={40}
+            height={40}
+            className='rounded-full'
+          />
+        </div>
       </div>
 
       {/* Search and Cart Area */}
       <div className="bg-purple-800 py-4 px-4 md:px-16">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 text-white">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 text-white">
+          
+          {/* Explore Section */}
+          <div className="flex items-center space-x-2">
+            <a href="#" className="text-sm hover:text-purple-600">Explore</a>
+            <IoIosArrowDown className="text-white w-4 h-4" />
+          </div>
 
-        {/* Explore Section */}
-        <div className="flex items-center space-x-2">
-          <a href="#" className="text-sm hover:text-purple-600">Explore</a>
-          <IoIosArrowDown className="text-white w-4 h-4" />
+          {/* Search Bar */}
+          <div className="flex-1 flex justify-center">
+            <input
+              type="text"
+              placeholder="Type skill here..."
+              className="w-full md:w-[30rem] lg:w-[40rem] px-4 py-2 rounded-full text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-600"
+            />
+          </div>
+
+          {/* Cart Icon */}
+          <div className="flex items-center space-x-2">
+            <FaCartPlus className="w-5 h-5" />
+            <p>Cart</p>
+          </div>
+
         </div>
-
-        {/* Search Bar */}
-        <div className="flex-1 flex justify-center">
-          <input
-            type="text"
-            placeholder="Type skill here..."
-            className="w-full md:w-[30rem] lg:w-[40rem] px-4 py-2 rounded-full text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-600"
-          />
-        </div>
-
-        {/* Cart Icon */}
-        <div className="flex items-center space-x-2">
-          <FaCartPlus className="w-5 h-5" />
-          <p>Cart</p>
-        </div>
-
       </div>
-    </div>
     </div>
   );
 };
