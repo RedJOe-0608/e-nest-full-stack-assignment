@@ -41,7 +41,7 @@ const CourseContent: React.FC = () => {
       <div className="flex  text-gray-800 w-3/4 bg-white mx-auto my-8 rounded-lg shadow-lg overflow-hidden">
             {/* Section List */}
         <div className="w-1/2 border-r border-gray-200">
-          <div className="bg-purple-600 text-gray-800 p-4 text-xl font-semibold">
+          <div className="bg-purple-600 text-white p-4 text-xl font-semibold">
             Sections
           </div>
           <div className="h-96 overflow-y-auto">
@@ -68,7 +68,7 @@ const CourseContent: React.FC = () => {
 
         {/* Lecture List */}
         <div className="w-1/2">
-          <div className="bg-purple-600 text-gray-800 p-4 text-xl font-semibold">
+          <div className="bg-purple-600 text-white p-4 text-xl font-semibold">
             Lectures
           </div>
           <div className="h-96 overflow-y-auto">

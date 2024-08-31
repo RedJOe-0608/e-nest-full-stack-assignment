@@ -29,9 +29,9 @@ const AboutInstructor: React.FC = () => {
   }, []);
 
     return (
-      <section className="py-8 bg-purple-50">
+      <section className="py-8  bg-purple-50">
         <h2 className="text-center text-purple-600 text-2xl font-bold mb-6">About The Instructor</h2>
-        <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md text-center">
+        <div className="w-3/4 mx-auto bg-white p-6 rounded-lg shadow-md text-center">
           <Image
             className="rounded-full mx-auto mb-4"
             width={150}

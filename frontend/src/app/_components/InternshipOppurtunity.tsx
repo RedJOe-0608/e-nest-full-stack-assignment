@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const InternshipOpportunity: React.FC = () => {
     return (
-      <section className="py-8 bg-white">
+      <section className="py-8 w-3/4 mx-auto my-8 rounded-md  bg-white">
         <h2 className="text-center text-purple-600 text-2xl font-bold mb-4">Internship Opportunity</h2>
         <p className="text-center text-gray-600 mb-6">
           Get internship opportunity at these Top Corporates after finishing this course:

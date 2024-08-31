@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const CourseOfferings: React.FC = () => {
     return (
-      <section className="flex flex-col items-center justify-center py-8 bg-purple-50">
+      <section className="flex flex-col items-center justify-center py-4 bg-purple-50">
         <h2 className="text-center text-purple-600 text-2xl font-bold mb-6">Course Offerings</h2>
         <div className="w-3/4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {Array(6).fill(null).map((_, index) => (
