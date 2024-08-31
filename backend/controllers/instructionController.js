@@ -1,5 +1,5 @@
 // controllers/instructorController.js
-const Instructor = require('../models/instructorModel');
+const Instructor = require('../models/InstructorModel');
 
 const getInstructor = async (req, res) => {
   try {
